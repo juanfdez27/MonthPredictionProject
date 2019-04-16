@@ -19,12 +19,12 @@ public class Main {
             System.out.println("But the child born on the Sabbath day,");
             System.out.println("Is fair and wise and good in every way.");
 
-            //System.out.println("What month were you born on?");
-           // month = keyboard.nextInt();
-           // System.out.println("What day were you born on?");
-           // day = keyboard.nextInt();
-           // System.out.println("What year were you born on?");
-           // year = keyboard.nextInt();
+            System.out.println("What month were you born on?");
+            month = keyboard.nextInt();
+            System.out.println("What day were you born on?");
+            day = keyboard.nextInt();
+            System.out.println("What year were you born on?");
+            year = keyboard.nextInt();
         }
 
     }
