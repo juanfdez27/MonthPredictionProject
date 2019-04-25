@@ -82,8 +82,30 @@ public class Main {
                 dayString = "Friday";
                 break;
         }
-        System.out.println("You were born on" +dayString+ ".");
-        poem.line (dayString);
+        System.out.println("You were born on a " +dayString+ ".");
+
+    }
+    public static void poem (String days){
+        String poem;
+        switch (days){
+            case "Monday" : poem = "Monday's child is fair of face";
+            break;
+            case "Tuesday" : poem = "Tuesday's child is full of grace";
+            break;
+            case "Wednesday" : poem = "Wednesday's child is full of woe";
+            break;
+            case "Thursday" : poem = "Thursday's child has far to go";
+            break;
+            case "Friday" : poem = "Friday's child is loving and giving";
+            break;
+            case "Saturday" : poem = "Saturday's child works hard for a living";
+            break;
+            case "Sunday" :poem = "Sunday's child is wise and good in every way";
+            break;
+
+        }
+        System.out.println(days);
+
     }
 }
 
