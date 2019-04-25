@@ -38,6 +38,7 @@ public class Main {
     }
     public static void dayoftheweek (int month, int day, int year){
         int dayoftheweek;
+        String dayString;
         int modYear = year|100;
         int zeroYear = year/100;
         switch (month){
@@ -58,6 +59,31 @@ public class Main {
             dayoftheweek = (day + 13 * (month + 1) / 5 + modYear + modYear / 4 + zeroYear / 4 + 5 * zeroYear);
             dayoftheweek = dayoftheweek | 7;
         }
+        switch (dayoftheweek){
+            case 0:
+                dayString = "Saturday";
+                break;
+            case 1:
+                dayString = "Sunday";
+                break;
+            case 2:
+                dayString = "Monday";
+                break;
+            case 3:
+                dayString = "Tuesday";
+                break;
+            case 4:
+                dayString = "Wednesday";
+                break;
+            case 5:
+                dayString = "Thursday";
+                break;
+            case 6:
+                dayString = "Friday";
+                break;
+        }
+        System.out.println("You were born on" +dayString+ ".");
+        poem.line (dayString);
     }
 }
 
