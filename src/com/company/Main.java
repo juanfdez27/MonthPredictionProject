@@ -19,7 +19,7 @@ public class Main {
             System.out.println("What year were you born on?");
             year = keyboard.nextInt();
 
-            int h = dayoftheweek(month, day, year);
+            int answer = dayoftheweek(month, day, year);
 
 
             // h= (q+ [13(m+1)/5] + k + [k/4] + [j/4] + 5j) mod7
@@ -49,7 +49,7 @@ public class Main {
     public static int dayoftheweek(int month, int day, int year) {
         int dayoftheweek;
         String dayString;
-        int modYear = year | 100;
+        int modYear = year % 100;
         int zeroYear = year / 100;
         switch (month) {
             case 1:
@@ -74,12 +74,42 @@ public class Main {
         return dayoftheweek;
 
     }
+    public static String printMonth (int month){
+        switch (month) {
+            case 1:
+               return "January";
+            case 2:
+                return "February";
+            case 3:
+                return "March";
+            case 4:
+                return "April";
+            case 5:
+                return "May";
+            case 6:
+                return "June";
+            case 7:
+                return "July";
+            case 8:
+                return "August";
+            case 9:
+                return "September";
+            case 10:
+                return "October";
+            case 11:
+                return "November";
+            case 12:
+                return "December";
+                default:
+                    return "Could not calc month";
+        }
+    }
 
     public static String printDayOfWeek(int dayoftheweek) {
         switch (dayoftheweek) {
             case 0:
                 return "Saturday";
- 
+
             case 1:
                 return "Sunday";
 
@@ -103,9 +133,9 @@ public class Main {
         }
     }
 
-    public static void printLineInPoem(String days) {
+    public static void printLineInPoem(String day) {
         String poem;
-        switch (days) {
+        switch (day) {
             case "Monday":
                 poem = "Monday's child is fair of face";
                 break;
@@ -129,7 +159,7 @@ public class Main {
                 break;
 
         }
-        System.out.println(days);
+        System.out.println(day);
 
     }
 }
